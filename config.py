@@ -1,11 +1,12 @@
 import os
 
+
 class Config:
 
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SECRET_KEY = 'SecretKey'
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    UPLOADED_PHOTOS_DEST ='app/static/photos'
+    UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
     #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
@@ -13,7 +14,7 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
-    SUBJECT_PREFIX = 'Watchlist'
+    SUBJECT_PREFIX = 'Blog'
     SENDER_EMAIL = 'james@moringaschool.com'
 
 # simple mde  configurations
@@ -26,17 +27,19 @@ class Config:
 
 class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    pass
+
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://aisha:Welcome123@localhost/watchlist_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://aisha:Welcome123@localhost/blog'
+
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://aisha:Welcome123@localhost/watchlist_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://aisha:Welcome123@localhost/blog'
     DEBUG = True
 
+
 config_options = {
-'development':DevConfig,
-'production':ProdConfig,
-'test':TestConfig
+    'development': DevConfig,
+    'production': ProdConfig,
+    'test': TestConfig
 }
