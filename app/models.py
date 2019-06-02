@@ -22,6 +22,8 @@ class User(UserMixin, db.Model):
     password_hash = db.Column(db.String(255))
     photos = db.relationship('PhotoProfile', backref='user', lazy="dynamic")
 
+    article = db.relationship('Article', backref='user', lazy='dynamic')
+
     @property
     def password(self):
         raise AttributeError('You cannnot read the password attribute')
@@ -47,3 +49,22 @@ class PhotoProfile(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     pic_path = db.Column(db.String())
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+
+
+class Article(db.Model):
+    __tablename__ = 'articles'
+
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(255))
+    post = db.Column(db.Text)
+    posted = db.Column(db.Time, default=datetime.utcnow())
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+
+    def save_article(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_article(cls, id):
+        atricle = Article.query.filter_by(id=id).all()
+        return atricle
