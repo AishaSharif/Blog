@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro %}
+
+<!-- Content Block -->
+{% block content %}
+<div class="container">
+  <!-- Display Post -->
+  <div class="row">
+    {% if post %}
+    {{macro.displayPost(post)}}
+    {% else %}
+    <h3>Post an Article</h3>
+    {% endif %}
+  </div>
+  <!-- Display Comment -->
+  <div class="row">
+    {% if comment %}
+    <h5>This post has {{comments | count}}</h5>
+    {{macro.displayComment(comment)}}
+    <h2><a href="{{url_for('main.comment', id=post.id)}}">Comment</a></h2>
+    {% endif %}
+    <!-- <h2><a href="/post/comment/{{post.id}}">Leave a Comment</a></h2> -->
+  </div>
+</div>
+{% endblock %}
