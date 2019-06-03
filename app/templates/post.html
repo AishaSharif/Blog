@@ -8,16 +8,15 @@
   <div class="row">
     {% if post %}
     {{macro.displayPost(post)}}
-    {% else %}
-    <h3>Post an Article</h3>
     {% endif %}
   </div>
 
   <!-- Display Comment -->
-  <div class="row">
+  <div class="">
+    <!-- <h3>Leave a Comment</h3> -->
+    <br>
     {% if comments %}
     <h5>This post has {{comments | count}} Comments</h5>
-    <h4>COMMENTS</h4>
     {% for comment in comments %}
     <strong>
       <h5>{{comment.username}}</h5>
@@ -26,7 +25,6 @@
     <hr>
     {% endfor %}
     {% endif %}
-    <h3>Leave a Comment</h3>
   </div>
 
 </div>

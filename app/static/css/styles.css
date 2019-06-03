@@ -4,6 +4,9 @@ body{
   font-weight: 500;
   color: #666;
 }
+a.navbar-brand {
+  font-size: 22px;
+}
 .post-title a{
   color: #333;
   text-transform: capitalize;

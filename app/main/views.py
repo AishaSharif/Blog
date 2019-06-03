@@ -8,7 +8,8 @@ from .. import db, photos
 
 @main.route('/')
 def index():
-    post = Article.query.order_by(articles.posted.desc())
+    post = Article.query.order_by(Article.posted.desc())
+    # post = Article.get_article(id)
     title = f'Posts'
     return render_template('index.html', title=title, post=post)
 
@@ -47,7 +48,6 @@ def post(id):
 @login_required
 def deletepost(id):
     post = Article.delete_article(id)
-    comment = Comment.delete_comment(id)
     title = 'Delete Post'
     return redirect(url_for('main.index'))
 
