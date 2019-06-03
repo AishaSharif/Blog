@@ -1,0 +1,28 @@
+<!-- Displaying Posts -->
+{% macro displayPost(posts) %}
+{% for post in posts %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2><a href="{{url_for('main.post', id=post.id)}}">{{post.title}}</a></h2>
+      <h2>{{post.title}}</h2>
+      <article>{{post.post}}</article>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endmacro %}
+
+<!-- Displaying Comments -->
+{% macro displayComment(comments) %}
+{% for comment in comments %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h4>{{comment.username}}</h4>
+      <p>{{comment.comment}}</p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endmacro %}
