@@ -23,6 +23,7 @@ class User(UserMixin, db.Model):
     photos = db.relationship('PhotoProfile', backref='user', lazy="dynamic")
 
     article = db.relationship('Article', backref='user', lazy='dynamic')
+    comment = db.relationship('Comment', backref='user', lazy='dynamic')
 
     @property
     def password(self):
@@ -66,5 +67,28 @@ class Article(db.Model):
 
     @classmethod
     def get_article(cls, id):
-        atricle = Article.query.filter_by(id=id).all()
-        return atricle
+        article = Article.query.filter_by(id=id).all()
+        return article
+
+
+class Comment(db.Model):
+    __tablename__ = 'comments'
+
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(255))
+    comment = db.Column(db.String(255))
+    posted = db.Column(db.Time, default=datetime.utcnow())
+    post_id = db.Column(db.Integer, db.ForeignKey('articles.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+
+    def __repr__(self):
+        return f'User (self.name)'
+
+    def save_comment(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_comment(cls, id):
+        comments = Comment.query.filter_by(post_id=id).all()
+        return comments
