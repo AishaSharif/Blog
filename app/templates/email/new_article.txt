@@ -1,0 +1,5 @@
+new post alert
+
+Title: {post.title}
+A new article has been published.
+Go to this link to take a look 

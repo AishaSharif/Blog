@@ -26,6 +26,9 @@ def post_form():
 
         new_post.save_article()
 
+        # mail_message("New Post",
+        #              "email/new_article", user.email, post=new_post)
+
         return redirect(url_for('main.index'))
 
     title = f'New Post'
@@ -35,32 +38,44 @@ def post_form():
 @main.route('/post/<int:id>')
 def post(id):
     post = Article.get_article(id)
-    # comments = Comment.get_comment(post.id)
-    # title = f'{article.title}'
-    title = 'Post'
-
-    return render_template('post.html', title=title, post=post)
+    comments = Comment.get_comment(id)
+    title = f'Article'
+    return render_template('post.html', title=title, post=post, comments=comments)
 
 
-# @main.route('/comment/<int:id', methods=['GET', 'POST'])
-# @login_required
-# def comment(id):
-#     comment_form = CommentForm()
-#     post = Article.get_article(id)
+@main.route('/post/delete/<int:id>')
+@login_required
+def deletepost(id):
+    post = Article.delete_article(id)
+    comment = Comment.delete_comment(id)
+    title = 'Delete Post'
+    return redirect(url_for('main.post', id=post.id), title=title, post=post, comment=comment)
 
-#     if comment_form.validate_on_submit():
-#         username = comment_form.username.data
-#         comment = comment_form.username.data
 
-#         new_comment = Comment(comment)
-#         new_comment = Comment(post_id=post.id, username=username,
-#                               comment=comment, user=current_user)
-#         new_comment.save_comment()
-#         return redirect(url_for('main.post', id=post.id))
+@main.route('/post/comment/<int:id>', methods=['GET', 'POST'])
+@login_required
+def comment(id):
+    comment_form = CommentForm()
+    post = Article.get_article(id)
 
-#     title = f'Post Comment'
-#     # comments = Comment.get_comment(id)
-#     return render_template('comment.html', title=title, comment_form=comment_form, post=post)
+    if comment_form.validate_on_submit():
+        new_comment = Comment(username=comment_form.username.data,
+                              comment=comment_form.comment.data, post_id=id, user=current_user)
+        new_comment.save_comment()
+        return redirect(url_for('main.post', id=id))
+        # return redirect(url_for('main.index'))
+
+    title = f'Post Comment'
+    comments = Comment.get_comment(id)
+    return render_template('comment.html', title=title, comment_form=comment_form, post=post, comments=comments)
+
+
+@main.route('/post/comments/<int:id>')
+def post_comments(id):
+    post = Article.get_article(id)
+    comments = Comment.get_comment(id)
+    title = f'Comments'
+    render_template('post.html', comments=comments)
 
 
 @main.route('/user/<uname>')
@@ -88,13 +103,13 @@ def update_profile(uname):
     return render_template('profile/update.html', form=form)
 
 
-@main.route('/user/<uname>/update/pic',methods= ['POST'])
+@main.route('/user/<uname>/update/pic', methods=['POST'])
 @login_required
 def update_pic(uname):
-    user = User.query.filter_by(username = uname).first()
+    user = User.query.filter_by(username=uname).first()
     if 'photo' in request.files:
         filename = photos.save(request.files['photo'])
         path = f'photos/{filename}'
         user.profile_pic_path = path
         db.session.commit()
-    return redirect(url_for('main.profile',uname=uname))
+    return redirect(url_for('main.profile', uname=uname))

@@ -11,5 +11,11 @@
     <h2><a href="{{url_for('main.post_form')}}">Post an Article</a></h2>
     {% endif %}
   </div>
+
+  <div class="row">
+    {% if quote %}
+    {{macro.displayQuotes(quote)}}
+    {% endif %}
+  </div>
 </div>
 {% endblock %}

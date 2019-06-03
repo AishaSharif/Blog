@@ -1,0 +1,193 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+0e7d459f9c2a_articles_table_article_user_rel.py	../migrations/versions/0e7d459f9c2a_articles_table_article_user_rel.py	1;"	kind:file	line:1
+319adec39c11_comments_table_comment_user_rel.py	../migrations/versions/319adec39c11_comments_table_comment_user_rel.py	1;"	kind:file	line:1
+Article	../app/models.py	/^class Article(db.Model):$/;"	kind:class	line:55
+ArticleForm	../app/main/forms.py	/^class ArticleForm(FlaskForm):$/;"	kind:class	line:7
+BasicsTestCase	../tests/test_basics.py	/^class BasicsTestCase(unittest.TestCase):$/;"	kind:class	line:6
+Comment	../app/models.py	/^class Comment(db.Model):$/;"	kind:class	line:80
+CommentForm	../app/main/forms.py	/^class CommentForm(FlaskForm):$/;"	kind:class	line:13
+Config	../config.py	/^class Config:$/;"	kind:class	line:4
+DEBUG	../config.py	/^    DEBUG = True$/;"	kind:variable	line:39
+DevConfig	../config.py	/^class DevConfig(Config):$/;"	kind:class	line:37
+LoginForm	../app/auth/forms.py	/^class LoginForm(FlaskForm):$/;"	kind:class	line:8
+MAIL_PASSWORD	../config.py	/^    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")$/;"	kind:variable	line:17
+MAIL_PORT	../config.py	/^    MAIL_PORT = 587$/;"	kind:variable	line:14
+MAIL_SERVER	../config.py	/^    MAIL_SERVER = 'smtp.googlemail.com'$/;"	kind:variable	line:13
+MAIL_USERNAME	../config.py	/^    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")$/;"	kind:variable	line:16
+MAIL_USE_TLS	../config.py	/^    MAIL_USE_TLS = True$/;"	kind:variable	line:15
+PhotoProfile	../app/models.py	/^class PhotoProfile(db.Model):$/;"	kind:class	line:47
+ProdConfig	../config.py	/^class ProdConfig(Config):$/;"	kind:class	line:29
+QUOTES_API_BASE_URL	../config.py	/^    QUOTES_API_BASE_URL = 'http:\/\/quotes.stormconsultancy.co.uk\/random.json'$/;"	kind:variable	line:7
+Quote	../app/models.py	/^class Quote:$/;"	kind:class	line:109
+RegistrationForm	../app/auth/forms.py	/^class RegistrationForm(FlaskForm):$/;"	kind:class	line:15
+SECRET_KEY	../config.py	/^    SECRET_KEY = 'SecretKey'$/;"	kind:variable	line:6
+SENDER_EMAIL	../config.py	/^    SENDER_EMAIL = 'sharifatma93@gmail.com'$/;"	kind:variable	line:19
+SIMPLEMDE_JS_IIFE	../config.py	/^    SIMPLEMDE_JS_IIFE = True$/;"	kind:variable	line:22
+SIMPLEMDE_USE_CDN	../config.py	/^    SIMPLEMDE_USE_CDN = True$/;"	kind:variable	line:23
+SQLALCHEMY_DATABASE_URI	../config.py	/^    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2:\/\/aisha:Welcome123@localhost\/blog'$/;"	kind:variable	line:34
+SQLALCHEMY_DATABASE_URI	../config.py	/^    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2:\/\/aisha:Welcome123@localhost\/blog'$/;"	kind:variable	line:38
+SQLALCHEMY_DATABASE_URI	../config.py	/^    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")$/;"	kind:variable	line:30
+SQLALCHEMY_TRACK_MODIFICATIONS	../config.py	/^    SQLALCHEMY_TRACK_MODIFICATIONS = False$/;"	kind:variable	line:9
+SUBJECT_PREFIX	../config.py	/^    SUBJECT_PREFIX = 'Blog'$/;"	kind:variable	line:18
+TestConfig	../config.py	/^class TestConfig(Config):$/;"	kind:class	line:33
+UPLOADED_PHOTOS_DEST	../config.py	/^    UPLOADED_PHOTOS_DEST = 'app\/static\/photos'$/;"	kind:variable	line:10
+UpdateProfile	../app/main/forms.py	/^class UpdateProfile(FlaskForm):$/;"	kind:class	line:19
+User	../app/models.py	/^class User(UserMixin, db.Model):$/;"	kind:class	line:13
+UserModelTest	../tests/test_user.py	/^class UserModelTest(unittest.TestCase):$/;"	kind:class	line:5
+__init__	../app/models.py	/^    def __init__(self, id, author, quote, permalinlk):$/;"	kind:member	line:110
+__init__.py	../app/__init__.py	1;"	kind:file	line:1
+__init__.py	../app/auth/__init__.py	1;"	kind:file	line:1
+__init__.py	../app/main/__init__.py	1;"	kind:file	line:1
+__repr__	../app/models.py	/^    def __repr__(self):$/;"	kind:member	line:43
+__repr__	../app/models.py	/^    def __repr__(self):$/;"	kind:member	line:90
+__tablename__	../app/models.py	/^    __tablename__ = 'articles'$/;"	kind:variable	line:56
+__tablename__	../app/models.py	/^    __tablename__ = 'comments'$/;"	kind:variable	line:81
+__tablename__	../app/models.py	/^    __tablename__ = 'profile_photos'$/;"	kind:variable	line:48
+__tablename__	../app/models.py	/^    __tablename__ = 'users'$/;"	kind:variable	line:14
+alembic	../env/bin/alembic	1;"	kind:file	line:1
+app	../manage.py	/^app = create_app('development')$/;"	kind:variable	line:6
+article	../app/models.py	/^    article = db.relationship('Article', backref='user', lazy='dynamic')$/;"	kind:variable	line:25
+auth	../app/auth/__init__.py	/^auth = Blueprint('auth', __name__)$/;"	kind:variable	line:3
+bio	../app/main/forms.py	/^    bio = TextAreaField('Tell us about you.', validators=[Required()])$/;"	kind:variable	line:20
+bio	../app/models.py	/^    bio = db.Column(db.String(255))$/;"	kind:variable	line:19
+bootstrap	../app/__init__.py	/^bootstrap = Bootstrap()$/;"	kind:variable	line:16
+branch_labels	../migrations/versions/0e7d459f9c2a_articles_table_article_user_rel.py	/^branch_labels = None$/;"	kind:variable	line:15
+branch_labels	../migrations/versions/319adec39c11_comments_table_comment_user_rel.py	/^branch_labels = None$/;"	kind:variable	line:15
+branch_labels	../migrations/versions/cbbe2b50d5ce_initial_migration.py	/^branch_labels = None$/;"	kind:variable	line:15
+cbbe2b50d5ce_initial_migration.py	../migrations/versions/cbbe2b50d5ce_initial_migration.py	1;"	kind:file	line:1
+comment	../app/main/forms.py	/^    comment = TextAreaField('Your Comment', validators=[Required()])$/;"	kind:variable	line:15
+comment	../app/main/views.py	/^def comment(id):$/;"	kind:function	line:57
+comment	../app/models.py	/^    comment = db.Column(db.String(255))$/;"	kind:variable	line:85
+comment	../app/models.py	/^    comment = db.relationship('Comment', backref='user', lazy='dynamic')$/;"	kind:variable	line:26
+config	../migrations/env.py	/^config = context.config$/;"	kind:variable	line:13
+config.py	../config.py	1;"	kind:file	line:1
+config_options	../config.py	/^config_options = {$/;"	kind:variable	line:42
+configure_request	../app/requests.py	/^def configure_request(app):$/;"	kind:function	line:6
+create_app	../app/__init__.py	/^def create_app(config_name):$/;"	kind:function	line:22
+db	../app/__init__.py	/^db = SQLAlchemy()$/;"	kind:variable	line:17
+delete_article	../app/models.py	/^    def delete_article(cls, id):$/;"	kind:member	line:74
+delete_comment	../app/models.py	/^    def delete_comment(cls, id):$/;"	kind:member	line:103
+deletepost	../app/main/views.py	/^def deletepost(id):$/;"	kind:function	line:49
+depends_on	../migrations/versions/0e7d459f9c2a_articles_table_article_user_rel.py	/^depends_on = None$/;"	kind:variable	line:16
+depends_on	../migrations/versions/319adec39c11_comments_table_comment_user_rel.py	/^depends_on = None$/;"	kind:variable	line:16
+depends_on	../migrations/versions/cbbe2b50d5ce_initial_migration.py	/^depends_on = None$/;"	kind:variable	line:16
+down_revision	../migrations/versions/0e7d459f9c2a_articles_table_article_user_rel.py	/^down_revision = 'cbbe2b50d5ce'$/;"	kind:variable	line:14
+down_revision	../migrations/versions/319adec39c11_comments_table_comment_user_rel.py	/^down_revision = '0e7d459f9c2a'$/;"	kind:variable	line:14
+down_revision	../migrations/versions/cbbe2b50d5ce_initial_migration.py	/^down_revision = None$/;"	kind:variable	line:14
+downgrade	../migrations/versions/0e7d459f9c2a_articles_table_article_user_rel.py	/^def downgrade():$/;"	kind:function	line:33
+downgrade	../migrations/versions/319adec39c11_comments_table_comment_user_rel.py	/^def downgrade():$/;"	kind:function	line:35
+downgrade	../migrations/versions/cbbe2b50d5ce_initial_migration.py	/^def downgrade():$/;"	kind:function	line:42
+easy_install	../env/bin/easy_install	1;"	kind:file	line:1
+easy_install-3.6	../env/bin/easy_install-3.6	1;"	kind:file	line:1
+email	../app/auth/forms.py	/^    email = StringField('Your Email Address', validators=[Required(), Email()])$/;"	kind:variable	line:16
+email	../app/auth/forms.py	/^    email = StringField('Your Email Address', validators=[Required(), Email()])$/;"	kind:variable	line:9
+email	../app/models.py	/^    email = db.Column(db.String(255), unique=True, index=True)$/;"	kind:variable	line:18
+email.py	../app/email.py	1;"	kind:file	line:1
+env.py	../migrations/env.py	1;"	kind:file	line:1
+flask	../env/bin/flask	1;"	kind:file	line:1
+forms.py	../app/auth/forms.py	1;"	kind:file	line:1
+forms.py	../app/main/forms.py	1;"	kind:file	line:1
+get_article	../app/models.py	/^    def get_article(cls, id):$/;"	kind:member	line:69
+get_comment	../app/models.py	/^    def get_comment(cls, id):$/;"	kind:member	line:98
+get_quotes	../app/requests.py	/^def get_quotes():$/;"	kind:function	line:11
+id	../app/models.py	/^    id = db.Column(db.Integer, primary_key=True)$/;"	kind:variable	line:16
+id	../app/models.py	/^    id = db.Column(db.Integer, primary_key=True)$/;"	kind:variable	line:50
+id	../app/models.py	/^    id = db.Column(db.Integer, primary_key=True)$/;"	kind:variable	line:58
+id	../app/models.py	/^    id = db.Column(db.Integer, primary_key=True)$/;"	kind:variable	line:83
+index	../app/main/views.py	/^def index():$/;"	kind:function	line:10
+init_app	../config.py	/^    def init_app(app):$/;"	kind:member	line:25
+load_user	../app/models.py	/^def load_user(user_id):$/;"	kind:function	line:9
+logger	../migrations/env.py	/^logger = logging.getLogger('alembic.env')$/;"	kind:variable	line:18
+login	../app/auth/views.py	/^def login():$/;"	kind:function	line:11
+login_manager	../app/__init__.py	/^login_manager = LoginManager()$/;"	kind:variable	line:10
+logout	../app/auth/views.py	/^def logout():$/;"	kind:function	line:27
+mail	../app/__init__.py	/^mail = Mail()$/;"	kind:variable	line:19
+mail_message	../app/email.py	/^def mail_message(subject, template, to, **kwargs):$/;"	kind:function	line:8
+main	../app/main/__init__.py	/^main = Blueprint('main', __name__)$/;"	kind:variable	line:3
+make_shell_context	../manage.py	/^def make_shell_context():$/;"	kind:function	line:24
+mako-render	../env/bin/mako-render	1;"	kind:file	line:1
+manage.py	../manage.py	1;"	kind:file	line:1
+manager	../manage.py	/^manager = Manager(app)$/;"	kind:variable	line:8
+markdown2	../env/bin/markdown2	1;"	kind:file	line:1
+migrate	../manage.py	/^migrate = Migrate(app, db)$/;"	kind:variable	line:9
+models.py	../app/models.py	1;"	kind:file	line:1
+password	../app/auth/forms.py	/^    password = PasswordField('Password', validators=[Required(),$/;"	kind:variable	line:18
+password	../app/auth/forms.py	/^    password = PasswordField('Password', validators=[Required()])$/;"	kind:variable	line:10
+password	../app/models.py	/^    def password(self):$/;"	kind:member	line:29
+password	../app/models.py	/^    def password(self, password):$/;"	kind:member	line:33
+password2	../app/auth/forms.py	/^    password2 = PasswordField('Confirm Passwords', validators=[Required()])$/;"	kind:variable	line:20
+password_hash	../app/models.py	/^    password_hash = db.Column(db.String(255))$/;"	kind:variable	line:22
+photos	../app/__init__.py	/^photos = UploadSet('photos', IMAGES)$/;"	kind:variable	line:18
+photos	../app/models.py	/^    photos = db.relationship('PhotoProfile', backref='user', lazy="dynamic")$/;"	kind:variable	line:23
+pic_path	../app/models.py	/^    pic_path = db.Column(db.String())$/;"	kind:variable	line:51
+pip	../env/bin/pip	1;"	kind:file	line:1
+pip3	../env/bin/pip3	1;"	kind:file	line:1
+pip3.6	../env/bin/pip3.6	1;"	kind:file	line:1
+post	../app/main/forms.py	/^    post = TextAreaField('Article Post')$/;"	kind:variable	line:9
+post	../app/main/views.py	/^def post(id):$/;"	kind:function	line:39
+post	../app/models.py	/^    post = db.Column(db.Text)$/;"	kind:variable	line:60
+post_comments	../app/main/views.py	/^def post_comments(id):$/;"	kind:function	line:74
+post_form	../app/main/views.py	/^def post_form():$/;"	kind:function	line:18
+post_id	../app/models.py	/^    post_id = db.Column(db.Integer, db.ForeignKey('articles.id'))$/;"	kind:variable	line:87
+posted	../app/models.py	/^    posted = db.Column(db.Time, default=datetime.utcnow())$/;"	kind:variable	line:61
+posted	../app/models.py	/^    posted = db.Column(db.Time, default=datetime.utcnow())$/;"	kind:variable	line:86
+process_results	../app/requests.py	/^def process_results(quotes_list):$/;"	kind:function	line:27
+process_revision_directives	../migrations/env.py	/^    def process_revision_directives(context, revision, directives):$/;"	kind:function	line:68
+profile	../app/main/views.py	/^def profile(uname):$/;"	kind:function	line:81
+profile_pic_path	../app/models.py	/^    profile_pic_path = db.Column(db.String())$/;"	kind:variable	line:20
+register	../app/auth/views.py	/^def register():$/;"	kind:function	line:34
+remember	../app/auth/forms.py	/^    remember = BooleanField('Remember me')$/;"	kind:variable	line:11
+requests.py	../app/requests.py	1;"	kind:file	line:1
+revision	../migrations/versions/0e7d459f9c2a_articles_table_article_user_rel.py	/^revision = '0e7d459f9c2a'$/;"	kind:variable	line:13
+revision	../migrations/versions/319adec39c11_comments_table_comment_user_rel.py	/^revision = '319adec39c11'$/;"	kind:variable	line:13
+revision	../migrations/versions/cbbe2b50d5ce_initial_migration.py	/^revision = 'cbbe2b50d5ce'$/;"	kind:variable	line:13
+run_migrations_offline	../migrations/env.py	/^def run_migrations_offline():$/;"	kind:function	line:36
+run_migrations_online	../migrations/env.py	/^def run_migrations_online():$/;"	kind:function	line:57
+save_article	../app/models.py	/^    def save_article(self):$/;"	kind:member	line:64
+save_comment	../app/models.py	/^    def save_comment(self):$/;"	kind:member	line:93
+save_user	../app/models.py	/^    def save_user(self):$/;"	kind:member	line:39
+sender_email	../app/email.py	/^sender_email = 'sharifatma93@gmail.com'$/;"	kind:variable	line:5
+setUp	../tests/test_basics.py	/^    def setUp(self):$/;"	kind:member	line:7
+setUp	../tests/test_user.py	/^    def setUp(self):$/;"	kind:member	line:7
+simple	../app/__init__.py	/^simple = SimpleMDE()$/;"	kind:variable	line:14
+source_tree_markdown2	../env/bin/markdown2	/^source_tree_markdown2 = join(dirname(__file__), "..", "lib", "markdown2.py")$/;"	kind:variable	line:7
+subject_pref	../app/email.py	/^subject_pref = 'Blog'$/;"	kind:variable	line:4
+submit	../app/auth/forms.py	/^    submit = SubmitField('Sign In')$/;"	kind:variable	line:12
+submit	../app/auth/forms.py	/^    submit = SubmitField('Sign Up')$/;"	kind:variable	line:21
+submit	../app/main/forms.py	/^    submit = SubmitField('Submit')$/;"	kind:variable	line:10
+submit	../app/main/forms.py	/^    submit = SubmitField('Submit')$/;"	kind:variable	line:16
+submit	../app/main/forms.py	/^    submit = SubmitField('Submit')$/;"	kind:variable	line:21
+target_metadata	../migrations/env.py	/^target_metadata = current_app.extensions['migrate'].db.metadata$/;"	kind:variable	line:28
+tearDown	../tests/test_basics.py	/^    def tearDown(self):$/;"	kind:member	line:12
+test	../manage.py	/^def test():$/;"	kind:function	line:16
+test_app_exists	../tests/test_basics.py	/^    def test_app_exists(self):$/;"	kind:member	line:15
+test_basics.py	../tests/test_basics.py	1;"	kind:file	line:1
+test_no_access_password	../tests/test_user.py	/^    def test_no_access_password(self):$/;"	kind:member	line:13
+test_password_setter	../tests/test_user.py	/^    def test_password_setter(self):$/;"	kind:member	line:10
+test_password_verification	../tests/test_user.py	/^    def test_password_verification(self):$/;"	kind:member	line:17
+test_user.py	../tests/test_user.py	1;"	kind:file	line:1
+title	../app/main/forms.py	/^    title = StringField('Article title', validators=[Required()])$/;"	kind:variable	line:8
+title	../app/models.py	/^    title = db.Column(db.String(255))$/;"	kind:variable	line:59
+update_pic	../app/main/views.py	/^def update_pic(uname):$/;"	kind:function	line:107
+update_profile	../app/main/views.py	/^def update_profile(uname):$/;"	kind:function	line:90
+upgrade	../migrations/versions/0e7d459f9c2a_articles_table_article_user_rel.py	/^def upgrade():$/;"	kind:function	line:19
+upgrade	../migrations/versions/319adec39c11_comments_table_comment_user_rel.py	/^def upgrade():$/;"	kind:function	line:19
+upgrade	../migrations/versions/cbbe2b50d5ce_initial_migration.py	/^def upgrade():$/;"	kind:function	line:19
+user_id	../app/models.py	/^    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))$/;"	kind:variable	line:52
+user_id	../app/models.py	/^    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))$/;"	kind:variable	line:62
+user_id	../app/models.py	/^    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))$/;"	kind:variable	line:88
+username	../app/auth/forms.py	/^    username = StringField('Enter your username', validators=[Required()])$/;"	kind:variable	line:17
+username	../app/main/forms.py	/^    username = StringField('Your Name', validators=[Required()])$/;"	kind:variable	line:14
+username	../app/models.py	/^    username = db.Column(db.String(255))$/;"	kind:variable	line:84
+username	../app/models.py	/^    username = db.Column(db.String(255), index=True)$/;"	kind:variable	line:17
+validate_email	../app/auth/forms.py	/^    def validate_email(self, data_field):$/;"	kind:member	line:23
+validate_username	../app/auth/forms.py	/^    def validate_username(self, data_field):$/;"	kind:member	line:27
+verify_password	../app/models.py	/^    def verify_password(self, password):$/;"	kind:member	line:36
+views.py	../app/auth/views.py	1;"	kind:file	line:1
+views.py	../app/main/views.py	1;"	kind:file	line:1
+wheel	../env/bin/wheel	1;"	kind:file	line:1

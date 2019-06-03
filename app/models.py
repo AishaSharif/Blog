@@ -70,6 +70,12 @@ class Article(db.Model):
         article = Article.query.filter_by(id=id).all()
         return article
 
+    @classmethod
+    def delete_article(cls, id):
+        article = Article.query.filter_by(id=id).first()
+        db.session.delete(article)
+        db.session.commit()
+
 
 class Comment(db.Model):
     __tablename__ = 'comments'
@@ -92,3 +98,17 @@ class Comment(db.Model):
     def get_comment(cls, id):
         comments = Comment.query.filter_by(post_id=id).all()
         return comments
+
+    @classmethod
+    def delete_comment(cls, id):
+        comment = Comment.query.filter_by(id=id).first()
+        db.session.delete(comment)
+        db.session.commit()
+
+
+class Quote:
+    def __init__(self, id, author, quote, permalinlk):
+        self.id = id
+        self.author = author
+        self.quote = quote
+        self.permalinlk = permalinlk
