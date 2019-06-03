@@ -1,41 +1,23 @@
-<!DOCTYPE html>
-<html>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Blog</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+    aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-</head>
-
-<body>
-  <div class="navbar navbar-inverse" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/"> Blog </a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="{{url_for('main.post_form')}}">Post an Article</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-          {% if current_user.is_authenticated %}
-          <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
-          <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
-          {% else %}
-          <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
-          {%endif%}
-        </ul>
-      </div>
-
-    </div>
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{url_for('main.post_form')}}">Post an Article</a></li>
+      {% if current_user.is_authenticated %}
+      <li class="nav-item"><a class="nav-link"
+          href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{url_for('auth.logout')}}">Sign out</a></li>
+      {% else %}
+      <li class="nav-item"><a class="nav-link" href="{{url_for('auth.login')}}">Sign in</a></li>
+      {%endif%}
+    </ul>
   </div>
-</body>
-
-</html>
+</nav>

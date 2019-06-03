@@ -1,10 +1,15 @@
 {% extends 'bootstrap/base.html'%}
 
+<!-- Styles Block -->
 {%block styles %}
 {{super()}}
 <!--Importing the simple mde css and js files  -->
 {{ simplemde.css}}
 {{ simplemde.js }}
+
+<link rel="stylesheet" href="{{url_for('static', filename='css/bootswatch.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK:100,400,500,700&display=swap" rel="stylesheet">
 {% endblock %}
 
 <!-- Navbar block  -->

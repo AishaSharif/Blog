@@ -1,0 +1,11 @@
+body{
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #666;
+}
+.post-title a{
+  color: #333;
+  text-transform: capitalize;
+  font-weight: 700;
+}
