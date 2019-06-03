@@ -8,7 +8,7 @@ from .. import db, photos
 
 @main.route('/')
 def index():
-    post = Article.query.order_by(Article.posted.desc())
+    post = Article.query.order_by(articles.posted.desc())
     title = f'Posts'
     return render_template('index.html', title=title, post=post)
 
